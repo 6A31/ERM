@@ -40,7 +40,7 @@ class Search(commands.Cog):
            user = ctx.author 
         guild_id = ctx.guild.id
         if guild_id == 823606319529066548:
-            guild_id = 1232928341359857747
+            guild_id = 1015622817452138606
         if self.bot.punishments_disabled is True:
             return await failure_embed(
                 ctx,
@@ -85,7 +85,7 @@ class Search(commands.Cog):
 
         magic_flags_reverse = {v: k for k, v in magic_flags.items()}  # this is reverse mapping for quick lookup
 
-        g_id = 1232928341359857747
+        g_id = 987798554972143728
         guild: discord.Guild = bot.get_guild(g_id)
         applied_flags = set()  # use set to automatically remove duplicates
         member: None | StaffConnection = await bot.staff_connections.fetch_by_spec(roblox_id=roblox_player.id)
