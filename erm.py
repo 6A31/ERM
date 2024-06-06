@@ -91,7 +91,7 @@ class Bot(commands.AutoShardedBot):
         # IDs are a security vulnerability.
 
         # Else fall back to the original
-        if user.id == 1165311055728226444:
+        if user.id == 996876555626225705:
             return True
         
         return await super().is_owner(user)
@@ -180,9 +180,9 @@ class Bot(commands.AutoShardedBot):
             # await bot.load_extension('utils.server')
 
             if not bot.is_synced:  # check if slash commands have been synced
-                bot.tree.copy_global_to(guild=discord.Object(id=987798554972143728))
+                bot.tree.copy_global_to(guild=discord.Object(id=1232928341359857747))
             if environment == "DEVELOPMENT":
-                await bot.tree.sync(guild=discord.Object(id=987798554972143728))
+                await bot.tree.sync(guild=discord.Object(id=1232928341359857747))
             else:
                 pass
                 # Prevent auto syncing
@@ -224,7 +224,7 @@ bot = Bot(
         replied_user=False, everyone=False, roles=False
     ),
 )
-bot.debug_servers = [987798554972143728]
+bot.debug_servers = [1232928341359857747]
 bot.is_synced = False
 bot.shift_management_disabled = False
 bot.punishments_disabled = False
@@ -638,7 +638,7 @@ async def iterate_prc_logs():
                     capture_exception(e)
                 continue
             except Exception as e:
-                channel = await bot.fetch_channel(1213523576603410452)                
+                channel = await bot.fetch_channel(1232928345390317568)                
                 await channel.send(content=f"[3] {(str(e) or repr(e))=}")
                 # with push_scope() as scope:
                 #     scope.level = "error"
