@@ -29,7 +29,7 @@ class Search(commands.Cog):
     @commands.guild_only()
     @commands.hybrid_command(
         name="mywarnings",
-        aliases=["mymoderations", "mypunishments"],
+        aliases=["mymoderations", "mypunishments", "moderations"],
         description="Lookup your punishments with ERM.",
         extras={"category": "Search"},
         with_app_command=True,
