@@ -6,7 +6,6 @@ import httpcore
 import pytz
 import roblox
 import asyncio
-import async_timeout
 
 from discord.ext import commands
 from discord.ext.commands import HybridCommandError

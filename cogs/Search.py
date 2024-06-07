@@ -143,10 +143,17 @@ class Search(commands.Cog):
             )
 
         if await staff_predicate(ctx):
-            moderations = [await bot.punishments.fetch_warning(i['_id']) async for i in bot.punishments.db.find({
-                "ModeratorID": ctx.author.id,
-                "Guild": guild_id
-            })]
+
+            moderator_id = user.id if user else ctx.author.id
+
+            moderations = [
+                await bot.punishments.fetch_warning(i['_id'])
+                async for i in bot.punishments.db.find({
+                    "ModeratorID": moderator_id,
+                    "Guild": guild_id
+                })
+            ]
+
             embed_list[0].add_field(
                 name="Staff Information",
                 value=(
