@@ -26,7 +26,7 @@ class OnCommandError(commands.Cog):
         error_id = error_gen()
 
 
-        if 'Invalid Webhook Token' in str(error) or 'Unknown Message' in str(error) or 'Unknown message' in str(error) or isinstance(error, ContentTypeError) or isinstance(error, asyncio.TimeoutError):
+        if 'Invalid Webhook Token' in str(error) or 'Unknown Message' in str(error) or 'Unknown message' in str(error) or isinstance(error, asyncio.TimeoutError):
             return
 
         if isinstance(error, HybridCommandError) and 'RemoteProtocolError: Server disconnected without sending a response.' in str(error):
@@ -51,7 +51,7 @@ class OnCommandError(commands.Cog):
                     color=BLANK_COLOR
                 )
             )
-            channel = await self.bot.fetch_channel(1232928341359857747)
+            channel = await self.bot.fetch_channel(1232928345390317568)
             with push_scope() as scope:
                 scope.set_tag("error_id", error_id)
                 scope.set_tag("guild_id", ctx.guild.id)

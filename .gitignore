@@ -13,3 +13,4 @@ package_lock.json
 venv/
 erm_venv/
 Dockerfile
+.vscode/
