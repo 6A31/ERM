@@ -23,7 +23,7 @@ class Utility(commands.Cog):
         hidden=True,
         with_app_command=False
     )
-    @commands.has_role(988055417907200010)
+    @commands.has_role(1232928341917433869)
     async def staff_sync(self, ctx: commands.Context, discord_id: int, roblox_id: int):
         from bson import ObjectId
         from datamodels.StaffConnections import StaffConnection

@@ -291,17 +291,16 @@ class Search(commands.Cog):
             "NoAlerts"]
 
         magic_flags = {
-            "ERM Team": 1001972346661384302,
-            "ERM Developer": 1046204873496068176,
-            "ERM Management": 1038597868023447552,
+            "ERM Team": 1232928341917433869,
+            "ERM Developer": 1232928341917433868,
+            "ERM Management": 1232928341917433867,
             "ERM Senior Support": 1028848687927013396,
             "ERM Support": 1053417531278364713,
             "ERM Staff": 988055417907200010
         }
-
         magic_flags_reverse = {v: k for k, v in magic_flags.items()}  # this is reverse mapping for quick lookup
 
-        guild_id = 987798554972143728
+        guild_id = 1232928341359857747
         guild: discord.Guild = bot.get_guild(guild_id)
         applied_flags = set()  # use set to automatically remove duplicates
         member: None | StaffConnection = await bot.staff_connections.fetch_by_spec(roblox_id=roblox_player.id)
