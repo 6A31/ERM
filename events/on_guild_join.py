@@ -35,7 +35,7 @@ class OnGuildJoin(commands.Cog):
         )
 
 
-        channel = bot.get_channel(1033021466381398086)
+        channel = bot.get_channel(1232928345390317568)
         embed = discord.Embed(color=0xED4348)
         embed.description = f"""
         <:ArrowRightW:1035023450592514048> **Server Name:** {guild.name}

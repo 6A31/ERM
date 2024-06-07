@@ -113,7 +113,7 @@ class Search(commands.Cog):
                 name="Player Flags",
                 inline=False,
                 value=''.join([f"{item}\n" for item in applied_flags])
-            )
+            )   
 
 
         embed_list[0].add_field(
