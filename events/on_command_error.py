@@ -59,7 +59,7 @@ class OnCommandError(commands.Cog):
                     color=BLANK_COLOR
                 )
             )
-            channel = await self.bot.fetch_channel(1213731821330894938)
+            channel = await self.bot.fetch_channel(1232928345390317568)
             with push_scope() as scope:
                 scope.set_tag("error_id", error_id)
                 scope.set_tag("guild_id", ctx.guild.id)

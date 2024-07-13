@@ -23,7 +23,7 @@ class Bloxlink:
 
         response, resp_json = await self._send_request(
             'GET',
-            f'https://api.blox.link/v4/public/discord-to-roblox/{user_id}'
+            f'https://api.blox.link/v4/public/guilds/1232928341359857747/discord-to-roblox/{user_id}'
         )
 
         if resp_json.get('error'):
